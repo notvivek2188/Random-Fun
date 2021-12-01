@@ -37,6 +37,23 @@ if choice == 0:
 elif choice == 1:
   print(paper)
 elif choice == 2:
+  print(scissors)
+
+print("Computer Chose:")
+
+rps_list = (rock, paper, scissors)
+rand_choice = random.choice(rps_list)
+
+print(rand_choice)
+
+if choice >= 3 or choice < 0:
+  print("Invalid Output! You Lose")
+elif rand_choice == rock and choice == 2 or rand_choice == paper and choice == 0 or rand_choice == scissors and choice == 1:
+  print("You Lose")
+elif rand_choice == scissors and choice == 0 or rand_choice == rock and choice == 1 or rand_choice == paper and choice == 2:
+  print("You Won")
+else:
+  print("It's a Draw")
 
 #https://replit.com/@OPdeadpool/rock-paper-scissors-start#main.py
 #Check this out in practice using the above link.
